@@ -1,8 +1,20 @@
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
+
+var heatmapData = [
+  new google.maps.LatLng(37.782, -122.447),
+  new google.maps.LatLng(37.782, -122.445),
+  new google.maps.LatLng(37.782, -122.443),
+  new google.maps.LatLng(37.782, -122.441),
+  new google.maps.LatLng(37.782, -122.439),
+  new google.maps.LatLng(37.782, -122.437),
+  new google.maps.LatLng(37.782, -122.435),
+  new google.maps.LatLng(37.785, -122.447),
+  new google.maps.LatLng(37.785, -122.445),
+  new google.maps.LatLng(37.785, -122.443),
+  new google.maps.LatLng(37.785, -122.441),
+  new google.maps.LatLng(37.785, -122.439),
+  new google.maps.LatLng(37.785, -122.437),
+  new google.maps.LatLng(37.785, -122.435)
+];
 
 
 let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
@@ -13,6 +25,12 @@ async function initMap(): Promise<void> {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 8,
   });
+
+  var heatmap = new google.maps.visualization.HeatmapLayer({
+    data: heatmapData
+  });
+  heatmap.setMap(map);
+  
 
   
   infoWindow = new google.maps.InfoWindow();
