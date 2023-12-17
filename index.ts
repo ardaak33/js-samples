@@ -29,7 +29,13 @@ async function initMap(): Promise<void> {
     data: heatmapData
   });
   heatmap.setMap(map);
-  
+
+  const image = "./scooter'.png";
+  const scooterMarker = new google.maps.Marker({
+    position: { lat: -33.89, lng: 151.274 },
+    map,
+    icon: image,
+  });
 
   
   infoWindow = new google.maps.InfoWindow();
