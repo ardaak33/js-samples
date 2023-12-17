@@ -1,28 +1,27 @@
 
 var heatmapData = [
-  new google.maps.LatLng(37.782, -122.447),
-  new google.maps.LatLng(37.782, -122.445),
-  new google.maps.LatLng(37.782, -122.443),
-  new google.maps.LatLng(37.782, -122.441),
-  new google.maps.LatLng(37.782, -122.439),
-  new google.maps.LatLng(37.782, -122.437),
-  new google.maps.LatLng(37.782, -122.435),
-  new google.maps.LatLng(37.785, -122.447),
-  new google.maps.LatLng(37.785, -122.445),
-  new google.maps.LatLng(37.785, -122.443),
-  new google.maps.LatLng(37.785, -122.441),
-  new google.maps.LatLng(37.785, -122.439),
-  new google.maps.LatLng(37.785, -122.437),
-  new google.maps.LatLng(37.785, -122.435)
+  new google.maps.LatLng(37.074, 37.339),
+  new google.maps.LatLng(37.074, 37.337),
+  new google.maps.LatLng(37.074, 37.335),
+  new google.maps.LatLng(37.074, 37.333),
+  new google.maps.LatLng(37.074, 37.331),
+  new google.maps.LatLng(37.074, 37.329),
+  new google.maps.LatLng(37.074, 37.327),
+  new google.maps.LatLng(37.077, 37.339),
+  new google.maps.LatLng(37.077, 37.337),
+  new google.maps.LatLng(37.077, 37.335),
+  new google.maps.LatLng(37.077, 37.333),
+  new google.maps.LatLng(37.077, 37.331),
+  new google.maps.LatLng(37.077, 37.329),
+  new google.maps.LatLng(37.077, 37.327)
 ];
-
 
 let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
 
 async function initMap(): Promise<void> {
   const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
   map = new Map(document.getElementById("map") as HTMLElement, {
-    center: { lat: -34.397, lng: 150.644 },
+    center: { lat: 37, lng: 37 },
     zoom: 8,
   });
 
