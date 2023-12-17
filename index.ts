@@ -1,15 +1,15 @@
 
 var heatmapData = [
-  new google.maps.LatLng(37.07663065783867, 37.33056655817415),
-  new google.maps.LatLng(37.07741815406587, 37.32980481084957),
-  new google.maps.LatLng(37.07657073932061, 37.33180037425767),
-  new google.maps.LatLng(37.07735823616272, 37.33098498275759),
-  new google.maps.LatLng(37.07778622014642, 37.33145705152079),
-  new google.maps.LatLng(37.07833403612035, 37.33153215336949),
-  new google.maps.LatLng(37.07575755464026, 37.33010521823263),
-  new google.maps.LatLng(37.07671625565642, 37.32963314950775),
-  new google.maps.LatLng(37.07600579088824, 37.33168235709454),
-  new google.maps.LatLng(37.076322504917755, 37.33275524064728)
+{location:new google.maps.LatLng(37.07663065783867, 37.33056655817415),weight:15},
+{location:new google.maps.LatLng(37.07741815406587, 37.32980481084957),weight:5},
+{location:new google.maps.LatLng(37.07657073932061, 37.33180037425767),weight:1},
+{location:new google.maps.LatLng(37.07735823616272, 37.33098498275759),weight:5},
+{location:new google.maps.LatLng(37.07778622014642, 37.33145705152079),weight:5},
+{location:new google.maps.LatLng(37.07833403612035, 37.33153215336949),weight:3},
+{location:new google.maps.LatLng(37.07575755464026, 37.33010521823263),weight:8},
+{location:new google.maps.LatLng(37.07671625565642, 37.32963314950775),weight:5},
+{location:new google.maps.LatLng(37.07600579088824, 37.33168235709454),weight:2},
+{location: new google.maps.LatLng(37.076322504917755, 37.33275524064728),weight:5}
 ];
 
 let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
