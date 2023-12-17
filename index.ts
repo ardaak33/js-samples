@@ -1,19 +1,15 @@
 
 var heatmapData = [
-  new google.maps.LatLng(37.074, 37.339),
-  new google.maps.LatLng(37.074, 37.337),
-  new google.maps.LatLng(37.074, 37.335),
-  new google.maps.LatLng(37.074, 37.333),
-  new google.maps.LatLng(37.074, 37.331),
-  new google.maps.LatLng(37.074, 37.329),
-  new google.maps.LatLng(37.074, 37.327),
-  new google.maps.LatLng(37.077, 37.339),
-  new google.maps.LatLng(37.077, 37.337),
-  new google.maps.LatLng(37.077, 37.335),
-  new google.maps.LatLng(37.077, 37.333),
-  new google.maps.LatLng(37.077, 37.331),
-  new google.maps.LatLng(37.077, 37.329),
-  new google.maps.LatLng(37.077, 37.327)
+  new google.maps.LatLng(37.07663065783867, 37.33056655817415),
+  new google.maps.LatLng(37.07741815406587, 37.32980481084957),
+  new google.maps.LatLng(37.07657073932061, 37.33180037425767),
+  new google.maps.LatLng(37.07735823616272, 37.33098498275759),
+  new google.maps.LatLng(37.07778622014642, 37.33145705152079),
+  new google.maps.LatLng(37.07833403612035, 37.33153215336949),
+  new google.maps.LatLng(37.07575755464026, 37.33010521823263),
+  new google.maps.LatLng(37.07671625565642, 37.32963314950775),
+  new google.maps.LatLng(37.07600579088824, 37.33168235709454),
+  new google.maps.LatLng(37.076322504917755, 37.33275524064728)
 ];
 
 let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
@@ -21,8 +17,8 @@ let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
 async function initMap(): Promise<void> {
   const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
   map = new Map(document.getElementById("map") as HTMLElement, {
-    center: { lat: 37, lng: 37 },
-    zoom: 8,
+    center: { lat: 37.07, lng: 37.3 },
+    zoom: 14,
   });
 
   var heatmap = new google.maps.visualization.HeatmapLayer({
@@ -31,8 +27,18 @@ async function initMap(): Promise<void> {
   heatmap.setMap(map);
 
   const image = "./scooter'.png";
-  const scooterMarker = new google.maps.Marker({
-    position: { lat: -33.89, lng: 151.274 },
+  const scooterMarker1 = new google.maps.Marker({
+    position: { lat: 37.07669913610292, lng: 37.33134976316552 },
+    map,
+    icon: image,
+  });
+  const scooterMarker2 = new google.maps.Marker({
+    position: { lat: 37.076433782505966, lng: 37.32941857279826},
+    map,
+    icon: image,
+  });
+  const scooterMarker3 = new google.maps.Marker({
+    position: { lat: 37.07749519129968, lng:37.33158579761951},
     map,
     icon: image,
   });
